@@ -1,0 +1,9 @@
+{
+    "type": "patch",
+    "paths": [
+        "desktop-app-patches/breakpad.diff",
+        "desktop-app-patches/crashpad.diff",
+        "desktop-app-patches/glibmm.patch",
+        "desktop-app-patches/libproxy.patch"
+    ]
+}

@@ -521,7 +521,7 @@ modules:
     cleanup:
       - '*'
 
-  - name: telegram-desktop
+  - name: 64gram-desktop
     buildsystem: cmake-ninja
     builddir: true
     build-options:
@@ -534,14 +534,15 @@ modules:
       - -DTDESKTOP_API_ID=611335
       - -DTDESKTOP_API_HASH=d524b414d21f4d37f08684c1df41ac9c
       - -DDESKTOP_APP_USE_PACKAGED_LAZY=ON
+      - -DCMAKE_INTERPROCEDURAL_OPTIMIZATION=ON
     sources:
       - type: git
-        url: https://github.com/telegramdesktop/tdesktop.git
-        commit: bc523c2685893bd4164f1cbe2c0defa90fc19873
-        tag: v4.9.1
+        url: https://github.com/TDesktop-x64/tdesktop.git
+        commit: ebce599489eed82cf0ee56e2a34ab9375264c3fa
+        tag:  v1.0.89 
         x-checker-data:
           type: json
-          url: https://api.github.com/repos/telegramdesktop/tdesktop/releases
+          url: https://api.github.com/repos/TDesktop-x64/tdesktop/releases
           tag-query: first | .tag_name
           timestamp-query: first | .published_at
           version-query: $tag | sub("^[vV]"; "")
